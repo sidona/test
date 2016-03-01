@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+</head>
+<body ng-app="testAngularApp" style="position: relative">
+<!--[if lte IE 8]>
+
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div ng-controller="MainCtrl" >
+
+
+        <div class="row">
+            <div class="menu">
+
+                <div class="col-md-6">
+                    <h3>Outils</h3>
+                    <h1>Format de numérotation</h1>
+                    <div class="row" id="column" >
+                        <div class="col-md-2"></div>
+                        <div class="col-md-3">Préfixe</div>
+                        <div class="col-md-3">Numérotation</div>
+                        <div class="col-md-3">Suffixe</div>
+                    </div>
+
+                    <div class="row" id="titre1">
+                        <div class="col-md-2" >Titre 1</div>
+                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre1.prefixe1"></div>
+                        <div class="col-md-3" >
+                            <i class="material-icons" >arrow_drop_down</i>
+                            <select name="select" ng-model="dataTitre1.select" style="position: relative">
+                            <option ng-repeat="option in dataTitre1.numerotation" value="{{option.id}}">{{option.value}} </option>
+
+                        </select>
+                            </div>
+                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre1.suffixe1"></div>
+                    </div>
+
+
+                    <div class="row" id="titre2">
+                        <div class="col-md-2">Titre 2</div>
+                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre2.prefixe2"></div>
+                        <div class="col-md-3">
+                            <i class="material-icons" >arrow_drop_down</i>
+                            <select name="select" ng-model="dataTitre2.select" class="selectarea">
+                            <option ng-repeat="option in dataTitre2.numerotation" value="{{option.id}}">{{option.value}}</option>
+                        </select></div>
+                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre2.suffixe2"></div>
+                    </div>
+
+                    <div class="row" id="titre3">
+                        <div class="col-md-2" >Titre 3</div>
+                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre3.prefixe3"></div>
+                        <div class="col-md-3">
+                            <i class="material-icons" >arrow_drop_down</i>
+                            <select name="select" ng-model="dataTitre3.select" class="selectarea">
+                            <option ng-repeat="option in dataTitre3.numerotation" value="{{option.id}}">{{option.value}}</option>
+                        </select></div>
+                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre3.suffixe3"></div>
+                    </div>
+
+                    <div class="row" id="titre4" >
+                        <div class="col-md-2" >Titre 4</div>
+                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre4.prefixe4"></div>
+                        <div class="col-md-3">
+                            <i class="material-icons" >arrow_drop_down</i>
+                            <select name="select" ng-model="dataTitre4.select" class="selectarea">
+                            <option ng-repeat="option in dataTitre4.numerotation" value="{{option.id}}">{{option.value}}</option>
+                        </select></div>
+                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre4.suffixe4"></div>
+                    </div>
+
+                    <div class="row" id="titre5" >
+                        <div class="col-md-2">Titre 5</div>
+                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre5.prefixe5"></div>
+                        <div class="col-md-3">
+                            <i class="material-icons" >arrow_drop_down</i>
+                            <select name="select" ng-model="dataTitre5.select" class="selectarea" >
+                            <option ng-repeat="option in dataTitre5.numerotation" value="{{option.id}}" >{{option.value}}</option>
+                        </select></div>
+                        <div class="col-md-3"><input type="text" class="form" placeholder="ex:-" ng-model="dataTitre5.suffixe5"></div>
+                    </div>
+
+                    <div class="row" id="titre6" >
+                        <div class="col-md-2">Titre 6</div>
+                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre6.prefixe6"></div>
+                        <div class="col-md-3">
+                            <i class="material-icons" >arrow_drop_down</i>
+                            <select name="select" ng-model="dataTitre6.select" class="selectarea">
+                            <option ng-repeat="option in dataTitre6.numerotation" value="{{option.id}}">{{option.value}}</option>
+                        </select></div>
+                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre6.suffixe6"></div>
+                    </div>
+            <div class="button-numerotation" style="margin-top: 165px">
+                <button type="button" class="btn btn-primary" ng-click="saveData()" onclick="location.href = 'www.yoursite.com'">Ok</button>
+                <button type="button" class="btn btn-default" ng-click="cancel()">Annuler</button>
+
+
+            </div>
+                </div>
+            </div>
+            <div>
+                <span class="glyphicon glyphicon-remove"></span>
+            </div>
+            <div class="result">
+                <div class="col-md-6">
+
+                    <div>Prévisualisation</div>
+                    <div class="content-result" >
+                        <div class="result-titre1">
+                            {{dataTitre1.prefixe1}} {{dataTitre1.select}} {{dataTitre1.suffixe1}} Titre 1
+                        </div>
+                        <div class="result-titre2">
+                            {{dataTitre2.prefixe2}} {{dataTitre2.select}} {{dataTitre2.suffixe2}} Titre 2
+                        </div>
+                        <div class="result-titre3" >
+                            {{dataTitre3.prefixe3}} {{dataTitre3.select}} {{dataTitre3.suffixe3}} Titre 3
+                        </div>
+                        <div class="result-titre4">
+                            {{dataTitre4.prefixe4}} {{dataTitre4.select}} {{dataTitre4.suffixe4}}Titre 4
+                        </div>
+                        <div class="result-titre5">
+                            {{dataTitre5.prefixe5}} {{dataTitre5.select}} {{dataTitre5.suffixe5}} Titre 5
+                        </div>
+                        <div class="result-titre6">
+                            {{dataTitre6.prefixe6}} {{dataTitre6.select}} {{dataTitre6.suffixe6}} Titre 6
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main.js"></script>
+
+<!-- endbuild -->
+</body>
+</html>
