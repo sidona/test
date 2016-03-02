@@ -57,7 +57,7 @@ angular.module('testAngularApp')
       numerotation: [
       {id: '1', value: '1'},
       {id: 'a', value: 'a'},
-      {id: 'i', value: 'i'},
+      {id: 'i', value: 'i'}
     ],
       prefixe5:null,
       suffixe5:null
@@ -67,7 +67,7 @@ angular.module('testAngularApp')
       numerotation: [
       {id: '1', value: '1'},
       {id: 'a', value: 'a'},
-      {id: 'i', value: 'i'},
+      {id: 'i', value: 'i'}
     ],
       prefixe6:null,
       suffixe6:null

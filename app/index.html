@@ -32,16 +32,16 @@
                     <h3>Outils</h3>
                     <h1>Format de numérotation</h1>
                     <div class="row" id="column" >
-                        <div class="col-md-2"></div>
+                        <div class="col-md-2" ></div>
                         <div class="col-md-3">Préfixe</div>
                         <div class="col-md-3">Numérotation</div>
                         <div class="col-md-3">Suffixe</div>
                     </div>
 
                     <div class="row" id="titre1">
-                        <div class="col-md-2" >Titre 1</div>
-                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre1.prefixe1"></div>
-                        <div class="col-md-3" >
+                        <div class="col-md-2 col-titre2" >Titre 1</div>
+                        <div class="col-md-3 col-titre3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre1.prefixe1"></div>
+                        <div class="col-md-3 col-titre3" >
                             <i class="material-icons" >arrow_drop_down</i>
                             <select name="select" ng-model="dataTitre1.select" style="position: relative">
                             <option ng-repeat="option in dataTitre1.numerotation" value="{{option.id}}">{{option.value}} </option>
@@ -53,9 +53,9 @@
 
 
                     <div class="row" id="titre2">
-                        <div class="col-md-2">Titre 2</div>
-                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre2.prefixe2"></div>
-                        <div class="col-md-3">
+                        <div class="col-md-2 col-titre2" >Titre 2</div>
+                        <div class="col-md-3 col-titre3 "><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre2.prefixe2"></div>
+                        <div class="col-md-3 col-titre3">
                             <i class="material-icons" >arrow_drop_down</i>
                             <select name="select" ng-model="dataTitre2.select" class="selectarea">
                             <option ng-repeat="option in dataTitre2.numerotation" value="{{option.id}}">{{option.value}}</option>
@@ -64,9 +64,9 @@
                     </div>
 
                     <div class="row" id="titre3">
-                        <div class="col-md-2" >Titre 3</div>
-                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre3.prefixe3"></div>
-                        <div class="col-md-3">
+                        <div class="col-md-2 col-titre2" >Titre 3</div>
+                        <div class="col-md-3 col-titre3" ><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre3.prefixe3"></div>
+                        <div class="col-md-3 col-titre3">
                             <i class="material-icons" >arrow_drop_down</i>
                             <select name="select" ng-model="dataTitre3.select" class="selectarea">
                             <option ng-repeat="option in dataTitre3.numerotation" value="{{option.id}}">{{option.value}}</option>
@@ -75,9 +75,9 @@
                     </div>
 
                     <div class="row" id="titre4" >
-                        <div class="col-md-2" >Titre 4</div>
-                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre4.prefixe4"></div>
-                        <div class="col-md-3">
+                        <div class="col-md-2 col-titre2" >Titre 4</div>
+                        <div class="col-md-3 col-titre3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre4.prefixe4"></div>
+                        <div class="col-md-3 col-titre3">
                             <i class="material-icons" >arrow_drop_down</i>
                             <select name="select" ng-model="dataTitre4.select" class="selectarea">
                             <option ng-repeat="option in dataTitre4.numerotation" value="{{option.id}}">{{option.value}}</option>
@@ -86,9 +86,9 @@
                     </div>
 
                     <div class="row" id="titre5" >
-                        <div class="col-md-2">Titre 5</div>
-                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre5.prefixe5"></div>
-                        <div class="col-md-3">
+                        <div class="col-md-2 col-titre2" >Titre 5</div>
+                        <div class="col-md-3 col-titre3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre5.prefixe5"></div>
+                        <div class="col-md-3 col-titre3">
                             <i class="material-icons" >arrow_drop_down</i>
                             <select name="select" ng-model="dataTitre5.select" class="selectarea" >
                             <option ng-repeat="option in dataTitre5.numerotation" value="{{option.id}}" >{{option.value}}</option>
@@ -97,14 +97,14 @@
                     </div>
 
                     <div class="row" id="titre6" >
-                        <div class="col-md-2">Titre 6</div>
-                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre6.prefixe6"></div>
-                        <div class="col-md-3">
+                        <div class="col-md-2 col-titre2" class="col-titre">Titre 6</div>
+                        <div class="col-md-3 col-titre3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre6.prefixe6"></div>
+                        <div class="col-md-3 col-titre3">
                             <i class="material-icons" >arrow_drop_down</i>
                             <select name="select" ng-model="dataTitre6.select" class="selectarea">
                             <option ng-repeat="option in dataTitre6.numerotation" value="{{option.id}}">{{option.value}}</option>
                         </select></div>
-                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre6.suffixe6"></div>
+                        <div class="col-md-3 col-titre3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre6.suffixe6"></div>
                     </div>
             <div class="button-numerotation" style="margin-top: 165px">
                 <button type="button" class="btn btn-primary" ng-click="saveData()" onclick="location.href = 'www.yoursite.com'">Ok</button>
