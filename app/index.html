@@ -38,21 +38,21 @@
                         <div class="col-md-3 col-titre3">Suffixe</div>
                     </div>
 
-                    <div class="row" id="titre1" ng-repeat=" date in data">
-                        <div class="col-md-2 col-titre2" >{{date.name}}</div>
-                        <div class="col-md-3 col-titre3"><input type="text" class="form" placeholder="ex: -" ng-model="date.prefixe"></div>
+                    <div class="row" id="titre1" ng-repeat="item in data">
+                        <div class="col-md-2 col-titre2" >{{item.name}}</div>
+                        <div class="col-md-3 col-titre3"><input type="text" class="form" placeholder="ex: -" ng-model="item.prefixe"></div>
                         <div class="col-md-3 col-titre3" >
-                            <i class="material-icons" >arrow_drop_down</i>
-                            <select name="select" ng-model="date.numero.select" style="position: relative">
-                            <option ng-repeat="option in date.numero.numerotation" value="{{option.id}}">{{option.value}} </option>
+                            <i class="material-icons">arrow_drop_down</i>
+                            <select name="select" ng-model="item.numero.select" style="position: relative">
+                            <option ng-repeat="option in item.numero.numerotation" value="{{option.id}}">{{option.value}} </option>
 
                         </select>
                             </div>
-                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="date.suffixe"></div>
+                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="item.suffixe"></div>
                     </div>
 
             <div class="button-numerotation">
-                <button type="button" class="btn btn-primary" ng-click="saveData()" onclick="location.href = 'www.yoursite.com'">Ok</button>
+                <button type="button" class="btn btn-primary" ng-click="saveData()" onclick="location.href = 'v1/numerotation'">Ok</button>
                 <button type="button" class="btn btn-default" ng-click="cancel()">Annuler</button>
             </div>
 
@@ -60,7 +60,7 @@
             </div>
 
             <div>
-                <span class="glyphicon glyphicon-remove"></span>
+                    <span class="material-icons">clear</span>
             </div>
 
 

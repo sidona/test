@@ -4,7 +4,7 @@
 }
 
 .result {
-    margin-top: 185px;
+    margin-top: 205px;
     margin-left: 71px;
 }
 body {
@@ -26,7 +26,7 @@ h3{
 }
 
 #column{
-    margin-top: 50px
+    margin-top: 70px
 }
 
 #titre1{
@@ -141,7 +141,7 @@ input:focus {
     background-color: #f7f6f6;
     width: 834px;
     height: 396px;
-    margin-top: 30px
+    margin-top: 29px
 }
 
 .result-titre1{
@@ -211,8 +211,8 @@ button:focus {
     border:1px solid #b1b1b1;
     box-shadow: 0 0 2px #b1b1b1;
 }
-.glyphicon-remove{
+.material-icons{
     margin-top: 20px;
     float: left;
-    margin-left: 899px;
+    margin-left: 889px;
 }

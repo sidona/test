@@ -10,7 +10,6 @@
 angular.module('testAngularApp')
   .controller('MainCtrl', function ($scope) {
 
-
     $scope.data = [
       {
         id: 1,
@@ -23,14 +22,14 @@ angular.module('testAngularApp')
             {id: 'A', value: 'A'}
           ],
           prefixe: '',
-          suffixe: ' '
+          suffixe: ''
         }
       },
       {
         id: 2,
         name: "Titre 2",
         numero: {
-          select: 'I',
+          select: '1',
           numerotation: [
             {id: 'I', value: 'I'},
             {id: '1', value: '1'},
@@ -72,7 +71,7 @@ angular.module('testAngularApp')
         id: 5,
         name: "Titre 5",
         numero: {
-          select: '1',
+          select: 'a',
           numerotation: [
             {id: '1', value: '1'},
             {id: 'a', value: 'a'},
@@ -86,7 +85,7 @@ angular.module('testAngularApp')
         id: 6,
         name: "Titre 6",
         numero: {
-          select: '1',
+          select: 'i',
           numerotation: [
             {id: '1', value: '1'},
             {id: 'a', value: 'a'},
@@ -106,7 +105,7 @@ angular.module('testAngularApp')
     $scope.original = angular.copy($scope.data);
 
     $scope.cancel = function () {
-      $scope.data = $scope.original;
-    }
+      $scope.data = angular.copy($scope.original);
+    };
     $scope.cancel();
   });
