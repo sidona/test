@@ -10,10 +10,3 @@ How to run the "Test" application:
 3. Run command bower install
 4. grunt serve
 
-## Build & development
-
-Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
