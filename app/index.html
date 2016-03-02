@@ -32,113 +32,60 @@
                     <h3>Outils</h3>
                     <h1>Format de numérotation</h1>
                     <div class="row" id="column" >
-                        <div class="col-md-2" ></div>
-                        <div class="col-md-3">Préfixe</div>
-                        <div class="col-md-3">Numérotation</div>
-                        <div class="col-md-3">Suffixe</div>
+                        <div class="col-md-2 col-titre2" ></div>
+                        <div class="col-md-3 col-titre3">Préfixe</div>
+                        <div class="col-md-3 col-titre3">Numérotation</div>
+                        <div class="col-md-3 col-titre3">Suffixe</div>
                     </div>
 
-                    <div class="row" id="titre1">
-                        <div class="col-md-2 col-titre2" >Titre 1</div>
-                        <div class="col-md-3 col-titre3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre1.prefixe1"></div>
+                    <div class="row" id="titre1" ng-repeat=" date in data">
+                        <div class="col-md-2 col-titre2" >{{date.name}}</div>
+                        <div class="col-md-3 col-titre3"><input type="text" class="form" placeholder="ex: -" ng-model="date.prefixe"></div>
                         <div class="col-md-3 col-titre3" >
                             <i class="material-icons" >arrow_drop_down</i>
-                            <select name="select" ng-model="dataTitre1.select" style="position: relative">
-                            <option ng-repeat="option in dataTitre1.numerotation" value="{{option.id}}">{{option.value}} </option>
+                            <select name="select" ng-model="date.numero.select" style="position: relative">
+                            <option ng-repeat="option in date.numero.numerotation" value="{{option.id}}">{{option.value}} </option>
 
                         </select>
                             </div>
-                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre1.suffixe1"></div>
+                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="date.suffixe"></div>
                     </div>
 
-
-                    <div class="row" id="titre2">
-                        <div class="col-md-2 col-titre2" >Titre 2</div>
-                        <div class="col-md-3 col-titre3 "><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre2.prefixe2"></div>
-                        <div class="col-md-3 col-titre3">
-                            <i class="material-icons" >arrow_drop_down</i>
-                            <select name="select" ng-model="dataTitre2.select" class="selectarea">
-                            <option ng-repeat="option in dataTitre2.numerotation" value="{{option.id}}">{{option.value}}</option>
-                        </select></div>
-                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre2.suffixe2"></div>
-                    </div>
-
-                    <div class="row" id="titre3">
-                        <div class="col-md-2 col-titre2" >Titre 3</div>
-                        <div class="col-md-3 col-titre3" ><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre3.prefixe3"></div>
-                        <div class="col-md-3 col-titre3">
-                            <i class="material-icons" >arrow_drop_down</i>
-                            <select name="select" ng-model="dataTitre3.select" class="selectarea">
-                            <option ng-repeat="option in dataTitre3.numerotation" value="{{option.id}}">{{option.value}}</option>
-                        </select></div>
-                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre3.suffixe3"></div>
-                    </div>
-
-                    <div class="row" id="titre4" >
-                        <div class="col-md-2 col-titre2" >Titre 4</div>
-                        <div class="col-md-3 col-titre3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre4.prefixe4"></div>
-                        <div class="col-md-3 col-titre3">
-                            <i class="material-icons" >arrow_drop_down</i>
-                            <select name="select" ng-model="dataTitre4.select" class="selectarea">
-                            <option ng-repeat="option in dataTitre4.numerotation" value="{{option.id}}">{{option.value}}</option>
-                        </select></div>
-                        <div class="col-md-3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre4.suffixe4"></div>
-                    </div>
-
-                    <div class="row" id="titre5" >
-                        <div class="col-md-2 col-titre2" >Titre 5</div>
-                        <div class="col-md-3 col-titre3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre5.prefixe5"></div>
-                        <div class="col-md-3 col-titre3">
-                            <i class="material-icons" >arrow_drop_down</i>
-                            <select name="select" ng-model="dataTitre5.select" class="selectarea" >
-                            <option ng-repeat="option in dataTitre5.numerotation" value="{{option.id}}" >{{option.value}}</option>
-                        </select></div>
-                        <div class="col-md-3"><input type="text" class="form" placeholder="ex:-" ng-model="dataTitre5.suffixe5"></div>
-                    </div>
-
-                    <div class="row" id="titre6" >
-                        <div class="col-md-2 col-titre2" class="col-titre">Titre 6</div>
-                        <div class="col-md-3 col-titre3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre6.prefixe6"></div>
-                        <div class="col-md-3 col-titre3">
-                            <i class="material-icons" >arrow_drop_down</i>
-                            <select name="select" ng-model="dataTitre6.select" class="selectarea">
-                            <option ng-repeat="option in dataTitre6.numerotation" value="{{option.id}}">{{option.value}}</option>
-                        </select></div>
-                        <div class="col-md-3 col-titre3"><input type="text" class="form" placeholder="ex: -" ng-model="dataTitre6.suffixe6"></div>
-                    </div>
-            <div class="button-numerotation" style="margin-top: 165px">
+            <div class="button-numerotation">
                 <button type="button" class="btn btn-primary" ng-click="saveData()" onclick="location.href = 'www.yoursite.com'">Ok</button>
                 <button type="button" class="btn btn-default" ng-click="cancel()">Annuler</button>
-
-
             </div>
+
                 </div>
             </div>
+
             <div>
                 <span class="glyphicon glyphicon-remove"></span>
             </div>
+
+
             <div class="result">
                 <div class="col-md-6">
 
                     <div>Prévisualisation</div>
                     <div class="content-result" >
                         <div class="result-titre1">
-                            {{dataTitre1.prefixe1}} {{dataTitre1.select}} {{dataTitre1.suffixe1}} Titre 1
+                            <span ng-bind="data[0].prefixe"></span> <span ng-bind="data[0].numero.select"> </span> <span ng-bind="data[0].suffixe"> </span> Titre 1
                         </div>
                         <div class="result-titre2">
-                            {{dataTitre2.prefixe2}} {{dataTitre2.select}} {{dataTitre2.suffixe2}} Titre 2
+                            <span ng-bind="data[1].prefixe"></span> <span ng-bind="data[1].numero.select"> </span> <span ng-bind="data[1].suffixe"> </span> Titre 2
                         </div>
                         <div class="result-titre3" >
-                            {{dataTitre3.prefixe3}} {{dataTitre3.select}} {{dataTitre3.suffixe3}} Titre 3
+                            <span ng-bind="data[2].prefixe"></span> <span ng-bind="data[2].numero.select"> </span> <span ng-bind="data[2].suffixe"> </span> Titre 3
                         </div>
                         <div class="result-titre4">
-                            {{dataTitre4.prefixe4}} {{dataTitre4.select}} {{dataTitre4.suffixe4}}Titre 4
+                            <span ng-bind="data[3].prefixe"></span> <span ng-bind="data[3].numero.select"> </span> <span ng-bind="data[3].suffixe"> </span> Titre 4
                         </div>
                         <div class="result-titre5">
-                            {{dataTitre5.prefixe5}} {{dataTitre5.select}} {{dataTitre5.suffixe5}} Titre 5
+                            <span ng-bind="data[4].prefixe"></span> <span ng-bind="data[4].numero.select"> </span> <span ng-bind="data[4].suffixe"> </span> Titre 5
                         </div>
                         <div class="result-titre6">
-                            {{dataTitre6.prefixe6}} {{dataTitre6.select}} {{dataTitre6.suffixe6}} Titre 6
+                            <span ng-bind="data[5].prefixe"></span> <span ng-bind="data[5].numero.select"> </span> <span ng-bind="data[5].suffixe"> </span> Titre 6
                         </div>
                     </div>
                 </div>
