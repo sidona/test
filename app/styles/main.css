@@ -4,7 +4,7 @@
 }
 
 .result {
-    margin-top: 205px;
+    margin-top: 178px;
     margin-left: 71px;
 }
 body {
@@ -17,20 +17,20 @@ body {
 }
 
 h1{
-    margin-top: 48px;
+    margin-top: 46px;
     font-family: Arial;
     font-size: 18px
 }
 h3{
-    margin-top: 42px
+    margin-top: 40px
 }
 
 #column{
-    margin-top: 70px
+    margin-top: 48px
 }
 
 #titre1{
-    margin-top: 30px
+    margin-top: 33px
 }
 
 select:focus {
@@ -140,8 +140,8 @@ input:focus {
 .content-result{
     background-color: #f7f6f6;
     width: 834px;
-    height: 396px;
-    margin-top: 29px
+    height: 411px;
+    margin-top: 33px
 }
 
 .result-titre1{
